@@ -20,7 +20,8 @@ simplify testing code, reduce code verbosity, and produce consistent and useful 
 ## Usage
 
 All assertions take a `testing.T` instance as the first argument, and will fail the test they're
-used in if the assertion fails.
+used in if the assertion fails. (They actually accept a much smaller interface than `testing.T`
+that makes testing this library much easier).
 
 ### True
 
