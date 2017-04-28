@@ -22,7 +22,9 @@ simplify testing code, reduce code verbosity, and produce consistent and useful 
 All assertions take a `testing.T` instance as the first argument, and will fail the test they're
 used in if the assertion fails.
 
-### `assert.True(t tester, condition bool, message string)`:
+### True
+
+`assert.True(t tester, condition bool, message string)`:
 
 ```go
 // Take a predicate, and a message to use in the error created for when the predicate is not truthy.
@@ -30,7 +32,9 @@ assert.True(t, 1 == 2, "expected 1 to equal 2")
 assert.True(t, something.IsTruthy(), "expected something to be truthy")
 ```
 
-### `assert.False(t tester, condition bool, message string)`:
+### False
+
+`assert.False(t tester, condition bool, message string)`:
 
 ```go
 // Take a predicate, and a message to use in the error created for when the predicate is not falsey.
@@ -38,7 +42,9 @@ assert.False(t, true == true, "expected true not to equal true")
 assert.False(t, something.IsTruthy(), "expected something to be falsey")
 ```
 
-### `assert.Equal(t tester, expected, actual interface{})`:
+### Equal
+
+`assert.Equal(t tester, expected, actual interface{})`:
 
 ```go
 // Take the expected value, then the actual value, and assert that they are equal.
@@ -46,7 +52,9 @@ assert.Equal(t, 1, 1)
 assert.Equal(t, 23, mathy.TenPlusThirteen())
 ```
 
-### `assert.NotEqual(t tester, expected, actual interface{})`:
+### Not Equal
+
+`assert.NotEqual(t tester, expected, actual interface{})`:
 
 ```go
 // Take the expected value, then the actual value, and assert that they are not equal.
@@ -54,14 +62,18 @@ assert.NotEqual(t, 1, 2)
 assert.NotEqual(t, 24, mathy.TenPlusThirteen())
 ```
 
-### `assert.OK(t tester, err error)`:
+### OK
+
+`assert.OK(t tester, err error)`:
 
 ```go
 // Assert the given `error` is nil.
 assert.OK(t, something.ThatMayReturnAnError())
 ```
 
-### `assert.NotOK(t tester, err error)`:
+### Not OK
+
+`assert.NotOK(t tester, err error)`:
 
 ```go
 // Assert the given `error` is not nil.
